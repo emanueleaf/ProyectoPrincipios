@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro Principal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Filtro Principal</h1>
+    
+    <div class="filtros">
+        <label for="filtroPrincipal">Filtro Principal:</label>
+        <select id="filtroPrincipal">
+            <option value="categoria">Categoría</option>
+            <option value="precio">Precio</option>
+        </select>
+        
+        <div id="filtroCategoria">
+            <label for="categoria">Categoría:</label>
+            <select id="categoria">
+                <option value="todos">Todos</option>
+                <option value="apartamento">Apartamento</option>
+                <option value="casa">Casa</option>
+                <option value="apartaestudio">Apartaestudio</option>
+            </select>
+        </div>
+
+        <div id="filtroPrecio">
+            <label for="precio">Precio (entre $0 y $1000):</label>
+            <input type="range" id="precio" min="0" max="1000" step="10" value="0">
+            <span id="precioValor">$0</span>
+        </div>
+    </div>
+    
+    <ul id="lista">
+        <li data-categoria="apartamento" data-precio="800">Apartamento en el centro</li>
+        <li data-categoria="casa" data-precio="600">Casa con jardín</li>
+        <li data-categoria="apartamento" data-precio="950">Apartamento amueblado</li>
+        <li data-categoria="apartaestudio" data-precio="400">Apartaestudio céntrico</li>
+        <li data-categoria="casa" data-precio="750">Casa moderna</li>
+        <li data-categoria="apartaestudio" data-precio="350">Apartaestudio económico</li>
+    </ul>
+    
+    <div id="resultado"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
