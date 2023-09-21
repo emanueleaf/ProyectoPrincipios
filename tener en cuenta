@@ -1,0 +1,17 @@
+ // Carga el JSON de propiedades desde un archivo o URL document.addEventListener("DOMContentLoaded", () => { fetch('/datos.json') // Ruta correcta al archivo JSON .then(response => response.json()) .then(data => { // Almacena los datos JSON en una variable
+global window.propertyData = data; // Llama a una función para mostrar las tarjetas de propiedades mostrarTarjetas(data); }) .catch(error => { console.error('Error al cargar el JSON:', error); }); }); // Función para mostrar las tarjetas de propiedades
+en la página function mostrarTarjetas(propiedades) { const propertyCards = document.getElementById('property-cards'); propertyCards.innerHTML = ''; propiedades.forEach(property => { // Crea una tarjeta para cada propiedad const card = document.createElement('div');
+card.classList.add('property-card'); // Agrega el título (tipo de inmueble) a la tarjeta const title = document.createElement('h3'); title.textContent = property.categoria; // Cambia a la propiedad que contiene el tipo de inmueble card.appendChild(title);
+// Agrega la inmobiliaria a la tarjeta const inmobiliaria = document.createElement('p'); inmobiliaria.textContent = 'Inmobiliaria: ' + property.inmobiliaria; card.appendChild(inmobiliaria); // Crea la imagen con el tamaño especificado const image = new
+Image(); image.src = property.imagen; image.width = 200; // Ancho de 200px image.height = 100; // Alto de 100px card.appendChild(image); // Agrega la tarjeta al contenedor de tarjetas propertyCards.appendChild(card); }); }
+
+
+--
+<!--
+                    <label for="num-banos ">Cantidad de Baños</label>
+                    <input type="number " id="num-banos " name="num-banos " min="1 " value="1 ">
+                -->
+                <!--
+                    <label for="terraza ">Terraza</label>
+                    <input type="checkbox " id="terraza " name="terraza "> 
+                -->
