@@ -11,13 +11,13 @@
 </head>
 
 <body>
-    <div class="logo_promo_bear ">
-        <div class="logo ">
-            <img src="./images/logo.svg " alt="Logo ">
+    <div class="logo_promo_bear">
+        <div class="logo">
+            <img src="./images/logo.svg" alt="Logo">
         </div>
-        <img class="promo " src="./images/promo.png " alt="promociones ">
+        <img class="promo" src="./images/promo.png" alt="promociones">
 
-        <div class="decorative-text ">
+        <div class="decorative-text">
             <p>───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───</p>
             <p>───█▒▒░░░░░░░░░▒▒█───</p>
             <p>────█░░█░░░░░█░░█────</p>
@@ -32,133 +32,129 @@
     </div>
 
 
-    <div class="container ">
-        <section class="preferences ">
+    <div class="container">
+        <section class="preferences">
             <h2>Preferencias</h2>
-            <form id="preferences-form ">
+            <form id="preferences-form">
+                <label for="urbanizacion">Tipo de unidad</label>
+                <select id="urbanizacion" name="urbanizacion">
+                    <option value="cerrada">urbanizacion cerrada</option>
+                    <option value="abierta">urbanizacion abierta</option>
+                </select>
+                <label class="zonas" id="label-zonas" for="zonas comunes">zonas comunes</label>
+                <select class="zonas" id="zonas-comunes" name="zonas-comunes">
+                    <option value="todos">piscina</option>
+                    <option value="venta">Gimnasio</option>
+                    <option value="alquiler">Piscina y Gimnasio</option>
+                </select>
+                <label for="venta-alquiler">Venta/Alquiler</label>
+                <select id="venta-alquiler" name="venta-alquiler">
+                    <option value="todos">Todos</option>
+                    <option value="venta">Venta</option>
+                    <option value="alquiler">Alquiler</option>
+                </select>
 
-                <label for="urbanizacion ">Tipo de unidad</label>
-                <select id="urbanizacion " name="urbanizacion ">
-                    <option value="cerrada ">urbanizacion cerrada</option>
-                    <option value="abierta ">urbanizacion abierta</option>
-                </select>
-                <label class="zonas " id="label-zonas " for="zonas comunes ">zonas comunes</label>
-                <select class="zonas " id="zonas-comunes " name="zonas-comunes ">
-                    <option value="todos ">piscina</option>
-                    <option value="venta ">Gimnasio</option>
-                    <option value="alquiler ">Piscina y Gimnasio</option>
-                </select>
-                <label for="venta-alquiler ">Venta/Alquiler</label>
-                <select id="venta-alquiler " name="venta-alquiler ">
-                    <option value="todos ">Todos</option>
-                    <option value="venta ">Venta</option>
-                    <option value="alquiler ">Alquiler</option>
-                </select>
-
-                <label for="inmobiliaria ">Inmobiliaria</label>
-                <select id="inmobiliaria " name="inmobiliaria ">
-                    <option value="todos ">Todos</option>
+                <label for="inmobiliaria">Inmobiliaria</label>
+                <select id="inmobiliaria" name="inmobiliaria">
+                    <option value="todos">Todos</option>
                     <!-- Las opciones de inmobiliaria se cargarán dinámicamente desde el JSON -->
                 </select>
-                <label for="ubicacion ">Ubicación</label>
-                <select id="ubicacion " name="ubicacion ">
-                    <option value="todos ">Todos</option>
+                <label for="ubicacion">Ubicación</label>
+                <select id="ubicacion" name="ubicacion">
+                    <option value="todos">Todos</option>
                     <!-- Las opciones de ubicación se cargarán dinámicamente desde el JSON -->
                 </select>
-
-                <!-- Botón de filtro general -->
-                <!-- <button type="button " id="filter-button ">Filtrar</button> -->
             </form>
         </section>
-        <section class="filters ">
+        <section class="filters">
             <h2>Filtros</h2>
-            <form id="filters-form ">
-                <label for="categoria ">Categoría</label>
-                <select id="categoria " name="categoria ">
-                    <option value="todos ">Todos</option>
-                    <option value="apartamento ">Apartamento</option>
-                    <option value="casa ">Casa</option>
+            <form id="filters-form">
+                <label for="categoria">Categoría</label>
+                <select id="categoria" name="categoria">
+                    <option value="todos">Todos</option>
+                    <option value="apartamento">Apartamento</option>
+                    <option value="casa">Casa</option>
                     <!-- Agrega otras opciones de categoría -->
                 </select>
 
-                <label for="filtro-precio ">Precio (en dólares)</label>
-                <input type="range " id="filtro-precio " name="filtro-precio " min="0 " max="1000000 " step="1000 " value="0 ">
-                <span id="precio-min ">0</span> - <span id="precio-max ">1,000,000</span>
+                <label for="filtro-precio">Precio (en dólares)</label>
+                <input type="range" id="filtro-precio" name="filtro-precio" min="0" max="1000000" step="1000" value="0">
+                <span id="precio-min">0</span> - <span id="precio-max">1,000,000</span>
 
                 <br>
                 <br>
-                <label for="filtro-discapacidad ">Adaptado para Discapacidad</label>
-                <select id="filtro-discapacidad " name="filtro-discapacidad ">
-                    <option value="todos ">Todos</option>
-                    <option value="si ">Sí</option>
-                    <option value="no ">No</option>
+                <label for="filtro-discapacidad">Adaptado para Discapacidad</label>
+                <select id="filtro-discapacidad" name="filtro-discapacidad">
+                    <option value="todos">Todos</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
                 </select>
 
 
-                <label for="filtro-calefaccion ">Calefacción</label>
-                <select id="filtro-calefaccion " name="filtro-calefaccion ">
-                    <option value="todos ">Todos</option>
-                    <option value="si ">Sí</option>
-                    <option value="no ">No</option>
+                <label for="filtro-calefaccion">Calefacción</label>
+                <select id="filtro-calefaccion" name="filtro-calefaccion">
+                    <option value="todos">Todos</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
                 </select>
 
 
-                <label for="filtro-parqueadero ">Parqueadero</label>
-                <select id="filtro-parqueadero " name="filtro-parqueadero ">
-                    <option value="todos ">Todos</option>
-                    <option value="si ">Sí</option>
-                    <option value="no ">No</option>
+                <label for="filtro-parqueadero">Parqueadero</label>
+                <select id="filtro-parqueadero" name="filtro-parqueadero">
+                    <option value="todos">Todos</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
                 </select>
 
 
-                <label for="filtro-areas-verdes ">Áreas Verdes</label>
-                <select id="filtro-areas-verdes " name="filtro-areas-verdes ">
-                    <option value="todos ">Todos</option>
-                    <option value="si ">Sí</option>
-                    <option value="no ">No</option>
+                <label for="filtro-areas-verdes">Áreas Verdes</label>
+                <select id="filtro-areas-verdes" name="filtro-areas-verdes">
+                    <option value="todos">Todos</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
                 </select>
 
 
-                <label for="filtro-banos ">Cantidad de Baños</label>
-                <select id="filtro-banos " name="filtro-banos ">
-                    <option value="todos ">Todos</option>
-                    <option value="1 ">1 Baño</option>
-                    <option value="2 ">2 Baños</option>
-                    <option value="3 ">3 Baños</option>
+                <label for="filtro-banos">Cantidad de Baños</label>
+                <select id="filtro-banos" name="filtro-banos">
+                    <option value="todos">Todos</option>
+                    <option value="1">1 Baño</option>
+                    <option value="2">2 Baños</option>
+                    <option value="3">3 Baños</option>
                 </select>
 
-                <label for="filtro-terraza ">Terraza</label>
-                <select id="filtro-terraza " name="filtro-terraza ">
-                    <option value="todos ">Todos</option>
-                    <option value="true ">Con Terraza</option>
-                    <option value="false ">Sin Terraza</option>
+                <label for="filtro-terraza">Terraza</label>
+                <select id="filtro-terraza" name="filtro-terraza">
+                    <option value="todos">Todos</option>
+                    <option value="true">Con Terraza</option>
+                    <option value="false">Sin Terraza</option>
                 </select>
 
-                <label for="filtro-pisos ">Cantidad de Pisos</label>
-                <input type="number " id="filtro-pisos " name="filtro-pisos " min="1 " value="1 ">
+                <label for="filtro-pisos">Cantidad de Pisos</label>
+                <input type="number" id="filtro-pisos" name="filtro-pisos" min="1" value="1">
 
-                <label for="filtro-amueblado ">Amueblado</label>
-                <select id="filtro-amueblado " name="filtro-amueblado ">
-                    <option value="todos ">Todos</option>
-                    <option value="true ">Amueblado</option>
-                    <option value="false ">Sin Amueblar</option>
+                <label for="filtro-amueblado">Amueblado</label>
+                <select id="filtro-amueblado" name="filtro-amueblado">
+                    <option value="todos">Todos</option>
+                    <option value="true">Amueblado</option>
+                    <option value="false">Sin Amueblar</option>
                 </select>
 
-                <label for="filtro-tamano ">Tamaño (m²)</label>
-                <select id="filtro-tamano " name="filtro-tamano ">
-                    <option value="todos ">Todos</option>
-                    <option value="50 ">Menos de 50 m²</option>
-                    <option value="100 ">50 - 100 m²</option>
-                    <option value="150 ">100 - 150 m²</option>
-                    <option value="200 ">150 - 200 m²</option>
-                    <option value="250 ">Más de 200 m²</option>
+                <label for="filtro-tamano">Tamaño (m²)</label>
+                <select id="filtro-tamano" name="filtro-tamano">
+                    <option value="todos">Todos</option>
+                    <option value="50">Menos de 50 m²</option>
+                    <option value="100">50 - 100 m²</option>
+                    <option value="150">100 - 150 m²</option>
+                    <option value="200">150 - 200 m²</option>
+                    <option value="250">Más de 200 m²</option>
                 </select>
 
-                <label for="filtro-acepta-mascotas ">Acepta Mascotas</label>
-                <select id="filtro-acepta-mascotas " name="filtro-acepta-mascotas ">
-                    <option value="todos ">Todos</option>
-                    <option value="si ">Sí</option>
-                    <option value="no ">No</option>
+                <label for="filtro-acepta-mascotas">Acepta Mascotas</label>
+                <select id="filtro-acepta-mascotas" name="filtro-acepta-mascotas">
+                    <option value="todos">Todos</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
                 </select>
 
             </form>
@@ -166,14 +162,14 @@
     </div>
 
     <!-- Agrega el contenedor para las tarjetas de propiedades -->
-    <div class="property-cards " id="property-cards ">
+    <div class="property-cards" id="property-cards">
         <!-- Las tarjetas de propiedades se cargarán aquí -->
 
     </div>
 
-    <script src="script.js "></script>
+    <script src="script.js"></script>
 
-    <script src="script3.js "></script>
+    <script src="script3.js"></script>
 </body>
 
 </html>
