@@ -57,6 +57,7 @@ function filtrarTarjetasPorBanos(cantidadBanos) {
         }
     });
 }
+
 // Agregar un evento de cambio al campo de filtro de terraza
 const filtroTerraza = document.getElementById('filtro-terraza');
 filtroTerraza.addEventListener('change', () => {
@@ -277,6 +278,50 @@ function filtrarTarjetasPorPrecio() {
             tarjeta.style.display = 'block'; // Mostrar la tarjeta si el precio es menor o igual al seleccionado
         } else {
             tarjeta.style.display = 'none'; // Ocultar la tarjeta si el precio es mayor
+        }
+    });
+}
+
+// Agregar un evento de cambio al campo de filtro "Zonas Comunes"
+const filtroZonasComunes = document.getElementById('zonas-comunes');
+filtroZonasComunes.addEventListener('change', () => {
+    const valorFiltro = filtroZonasComunes.value;
+    filtrarTarjetasPorZonasComunes(valorFiltro);
+});
+
+// Función para filtrar las tarjetas de inmuebles por la opción "Zonas Comunes"
+function filtrarTarjetasPorZonasComunes(zonasComunes) {
+    const tarjetas = document.querySelectorAll('.property-card');
+
+    tarjetas.forEach((tarjeta) => {
+        const tieneZonasComunes = tarjeta.dataset.zonasComunes === 'true'; // Obtener la información de "zonas_comunes" desde el atributo data
+
+        if (zonasComunes === 'todos' || (zonasComunes === 'si' && tieneZonasComunes) || (zonasComunes === 'no' && !tieneZonasComunes)) {
+            tarjeta.style.display = 'block'; // Mostrar la tarjeta si coincide con el filtro o se selecciona "todos"
+        } else {
+            tarjeta.style.display = 'none'; // Ocultar la tarjeta si no coincide con el filtro
+        }
+    });
+}
+
+// Agregar un evento de cambio al campo de filtro "Venta/Alquiler"
+const filtroTipoVenta = document.getElementById('venta-alquiler');
+filtroTipoVenta.addEventListener('change', () => {
+    const valorFiltro = filtroTipoVenta.value;
+    filtrarTarjetasPorTipoVenta(valorFiltro);
+});
+
+// Función para filtrar las tarjetas de inmuebles por el tipo de venta
+function filtrarTarjetasPorTipoVenta(tipoVenta) {
+    const tarjetas = document.querySelectorAll('.property-card');
+
+    tarjetas.forEach((tarjeta) => {
+        const tipoVentaTarjeta = tarjeta.dataset.tipoVenta; // Obtener el tipo de venta desde el atributo data
+
+        if (tipoVenta === 'todos' || tipoVenta === tipoVentaTarjeta) {
+            tarjeta.style.display = 'block'; // Mostrar la tarjeta si coincide con el filtro o se selecciona "todos"
+        } else {
+            tarjeta.style.display = 'none'; // Ocultar la tarjeta si no coincide con el filtro
         }
     });
 }

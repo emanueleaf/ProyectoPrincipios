@@ -48,9 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
         tarjeta.dataset.calefaccion = propiedad.calefaccion ? 'true' : 'false';
         tarjeta.dataset.discapacidad = propiedad.adaptado_discapacidad ? 'true' : 'false';
         tarjeta.dataset.precio = propiedad.precio;
-
+        tarjeta.dataset.zonasComunes = propiedad.zonas_comunes ? 'true' : 'false';
+        tarjeta.dataset.tipoVenta = propiedad.tipo_venta; // Nuevo atributo para el tipo de venta
         return tarjeta;
     }
+
 
     // Obtén el contenedor de tarjetas
     const contenedorTarjetas = document.getElementById('property-cards');

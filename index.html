@@ -8,6 +8,7 @@
     <title>Filtrador de Propiedades</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="/images/logo.svg" />
+
 </head>
 
 <body>
@@ -39,20 +40,27 @@
                     <option value="cerrada">urbanizacion cerrada</option>
                     <option value="abierta">urbanizacion abierta</option>
                 </select>
+                <!---->
                 <label class="zonas" id="label-zonas" for="zonas comunes">zonas comunes</label>
                 <select class="zonas" id="zonas-comunes" name="zonas-comunes">
                     <option value="todos">piscina</option>
                     <option value="venta">Gimnasio</option>
                     <option value="alquiler">Piscina y Gimnasio</option>
                 </select>
+                <label for="filtro-terraza">Terraza</label>
+                <select id="filtro-terraza" name="filtro-terraza">
+                        <option value="todos">Todos</option>
+                        <option value="true">Con Terraza</option>
+                        <option value="false">Sin Terraza</option>
+                </select>
+
+
                 <label for="venta-alquiler">Venta/Alquiler</label>
                 <select id="venta-alquiler" name="venta-alquiler">
                     <option value="todos">Todos</option>
                     <option value="venta">Venta</option>
                     <option value="alquiler">Alquiler</option>
                 </select>
-
-
                 <label for="inmobiliaria">Inmobiliaria</label>
                 <select id="inmobiliaria" name="inmobiliaria">
                     <option value="todos">Todos</option>
@@ -159,7 +167,6 @@
                     <option value="si">Sí</option>
                     <option value="no">No</option>
                 </select>
-
             </form>
         </section>
     </div>
